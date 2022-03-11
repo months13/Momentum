@@ -5,6 +5,8 @@ const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
 
 const txt = document.querySelector(".text");
 
+console.log("sdf1234");
+
 const superEventHandler = {
   mouse_enter: function () {
     txt.style.color = colors[2];

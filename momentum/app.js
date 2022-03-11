@@ -1,13 +1,11 @@
-let odd_print = function(i){
-  if(i % 2 == 0){
-    console.log(i);
-  }
+const loginForm = document.querySelector("#login-form");
+
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
+
+function onLoginSubmit(event){
+  event.preventDefault();
+  console.log(event);
 }
 
-let printing = function(n, f){
-  for(let i = 0; i<n; i++){
-    f(i);
-  }
-}
-
-printing(10,odd_print);
+loginForm.addEventListener("submit", onLoginSubmit);
