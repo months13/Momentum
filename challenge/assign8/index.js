@@ -8,10 +8,10 @@ function getClock(){
   
   const day_left = d_day.getTime() - today.getTime();
 
-  const days = Math.floor(day_left/(1000*60*60*24));
-  const hours = Math.floor((day_left % (1000*60*60*24))/(1000*60*60));
-  const minutes = Math.floor((day_left % (1000*60*60))/(1000*60));
-  const seconds = Math.floor((day_left % (1000*60))/1000);
+  const days = String(Math.floor(day_left/(1000*60*60*24))).padStart(2, "0");
+  const hours = String(Math.floor((day_left % (1000*60*60*24))/(1000*60*60))).padStart(2, "0");
+  const minutes = String(Math.floor((day_left % (1000*60*60))/(1000*60))).padStart(2, "0");
+  const seconds = String(Math.floor((day_left % (1000*60))/1000)).padStart(2, "0");
 
   clock.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
   
